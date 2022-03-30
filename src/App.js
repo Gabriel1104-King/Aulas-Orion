@@ -1,20 +1,39 @@
-
+import './App.css';
 import Menu from './components/Menu';
 import  'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card, Container, Nav, Navbar } from 'react-bootstrap';
-import Cartao from './components/Cartao';
+import { Button, Card, Container } from 'react-bootstrap';
+//import Cartao from './components/Cartao';
+//import Box from './components/Menu';
+
+import Carros from './pages/Carros';
+import Objeto from './pages/Objeto';
+import Array from './pages/Array';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 
 function App() {
   return (
     <div>
-     <Menu>
+     
         
-        </Menu>
+        
 
-        <Cartao imagem=""></Cartao>
-    
+  
+      <BrowserRouter>
+      <Menu/>
+      <Routes>
+      <Route path="/carros" element={<Carros/>} />
+      <Route path="/array" element={<Array/>} />
+      <Route path="/objeto" element={ <Objeto/>}/>
+
+      
+       </Routes>
+       </BrowserRouter>
+          
+    {/* 
   <Container>
-   
+   <Box/><Cartao imagem=""></Cartao>
    <Cartao></Cartao>
 
    <Card border="primary" style={{ width: '18rem' }}>
@@ -43,7 +62,7 @@ function App() {
           <h1>Hello World</h1>
 
           <Button variant='primary'>Primary</Button>
-          </Container>
+          </Container>*/}
      </div>  
   );
 }
