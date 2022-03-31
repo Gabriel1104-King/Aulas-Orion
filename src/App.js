@@ -22,6 +22,7 @@ function App() {
   
       <BrowserRouter>
       <Menu/>
+      <Container>
       <Routes>
       <Route path="/carros" element={<Carros/>} />
       <Route path="/array" element={<Array/>} />
@@ -29,6 +30,7 @@ function App() {
 
       
        </Routes>
+       </Container>
        </BrowserRouter>
           
     {/* 
