@@ -1,4 +1,5 @@
 import React from 'react'
+import { Card, Col, Row } from 'react-bootstrap'
 
 const Objeto = () => {
 
@@ -11,7 +12,25 @@ const Objeto = () => {
 
     ]  
   return (
-    <div>Objeto</div>
+    <div>
+      <h1>Objeto</h1>
+      <h2>Carros</h2>
+
+       <Row>
+        {carros.map(item => (
+          <Col md={3}>
+          <Card>
+            <Card.Img variant="top" src={item.foto}/>
+            <Card.Body>
+              <Card.Title>{item.marca} - {item.modelo}</Card.Title>
+              <Card.Text><strong></strong></Card.Text>
+            </Card.Body>
+          </Card>
+          </Col>
+        )
+          )}
+          </Row>
+      </div>
   )
 }
 

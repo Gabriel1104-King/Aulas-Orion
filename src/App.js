@@ -8,6 +8,8 @@ import { Button, Card, Container } from 'react-bootstrap';
 import Carros from './pages/Carros';
 import Objeto from './pages/Objeto';
 import Array from './pages/Array';
+import Contador from './pages/Contador';
+import Filmes from './pages/Filmes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -27,6 +29,8 @@ function App() {
       <Route path="/carros" element={<Carros/>} />
       <Route path="/array" element={<Array/>} />
       <Route path="/objeto" element={ <Objeto/>}/>
+      <Route path="/contador" element={ <Contador/>}/>
+      <Route path="/filmes" element={ <Filmes/>}/>
 
       
        </Routes>
