@@ -11,6 +11,7 @@ import Array from './pages/Array';
 import Contador from './pages/Contador';
 import Filmes from './pages/Filmes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import FilmesDetalhes from './pages/FilmesPopulares.jsx/FilmesDetalhes';
 
 
 
@@ -18,7 +19,7 @@ function App() {
   return (
     <div>
      
-        
+      
         
 
   
@@ -31,6 +32,9 @@ function App() {
       <Route path="/objeto" element={ <Objeto/>}/>
       <Route path="/contador" element={ <Contador/>}/>
       <Route path="/filmes" element={ <Filmes/>}/>
+      
+      <Route path="/:id" element={ <FilmesDetalhes/>}/>
+
 
       
        </Routes>
@@ -38,7 +42,7 @@ function App() {
        </BrowserRouter>
           
     {/* 
-  <Container>
+  <Container>  <header className='App-header'>
    <Box/><Cartao imagem=""></Cartao>
    <Cartao></Cartao>
 
@@ -69,6 +73,7 @@ function App() {
 
           <Button variant='primary'>Primary</Button>
           </Container>*/}
+         
      </div>  
   );
 }
